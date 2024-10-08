@@ -1,0 +1,24 @@
+public class Main {
+    public static void main(String[] args) {
+        StringProcessor processor = new StringProcessor();
+
+        // Testing isStrongPassword
+        String password = "P@ssw0rd123";
+        System.out.println("Is strong password: " + processor.isStrongPassword(password));
+
+        // Testing calculateDigits
+        String sentenceWithDigits = "Hello 123, this is a test 456.";
+        int digitCount = processor.calculateDigits(sentenceWithDigits);
+        System.out.println("Number of digits: " + digitCount);
+
+        // Testing calculateWords
+        String sentenceWithWords = "Hello world! This is a test.";
+        int wordCount = processor.calculateWords(sentenceWithWords);
+        System.out.println("Number of words: " + wordCount);
+
+        // Testing calculateExpression
+        String expression = "10 + 2 * 6";
+        double result = processor.calculateExpression(expression);
+        System.out.println("Result of expression: " + result);
+    }
+}
